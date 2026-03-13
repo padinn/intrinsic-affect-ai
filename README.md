@@ -191,7 +191,7 @@ Parameters gradually return to 0 over time:
 
 ```
 54-bio-emotions/
-├── SKILL.md          # Main skill definition (Chinese)
+├── SKILL.md          # Main skill definition
 ├── README.md         # This file (English)
 └── README-ZH.md      # Chinese version
 ```
@@ -207,3 +207,7 @@ Created for OpenClaw agents
 ## Contributing
 
 Pull requests welcome! Add new emotional states or improve parameter detection logic.
+
+## Paper
+
+DOI：https://doi.org/10.17605/OSF.IO/HDVF3
