@@ -1,0 +1,9 @@
+{
+  "name": "54-bio-emotions",
+  "version": "1.0.0",
+  "description": "An OpenClaw agent skill that dynamically adjusts response style based on three emotional parameters (Safety, Urgency, Need). Calculates 54 distinct emotional states based on 3 hormones × 3 levels × 2 directions.",
+  "author": "Guo Zhuoqiang",
+  "homepage": "https://github.com/padinn/54-bio-emotions",
+  "tags": ["emotion", "personality", "response-style"],
+  "emoji": "💕"
+}

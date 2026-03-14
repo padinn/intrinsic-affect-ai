@@ -1,3 +1,9 @@
+---
+name: 54-bio-emotions
+description: An OpenClaw agent skill that dynamically adjusts response style based on three emotional parameters (Safety, Urgency, Need). Calculates 54 distinct emotional states based on 3 hormones × 3 levels × 2 directions.
+emoji: 💕
+---
+
 # 54 Bio-Emotions Skill
 
 ## Introduction
