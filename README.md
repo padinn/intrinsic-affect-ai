@@ -6,6 +6,41 @@ An OpenClaw agent skill that dynamically adjusts response style based on three e
 
 54 Bio-Emotions analyzes the user's communication style (tone, urgency, sentiment) and calculates three emotional parameters to determine one of 54 possible emotional states. The response is then tailored with appropriate emojis and tone.
 
+## Version History
+
+### v1.0 - 关键词触发 (Keyword Triggered)
+- **时间**：2026-03-14
+- **触发方式**：根据用户消息中的关键词判断情绪
+  - 看到"谢谢" → Need +0.3
+  - 看到"！！" → Urgency +0.3
+  - 看到"批评" → Safety -0.2
+- **优点**：简单直观
+- **缺点**：依赖关键词，无法理解语义
+
+### v2.0 - LLM 语义分析 (LLM Semantic Analysis)
+- **时间**：2026-03-15
+- **触发方式**：LLM 理解整句话的含义，自动分析情绪
+- **核心变化**：不需要关键词，语义理解后自动判断
+- **优点**：能理解真实意图，不受关键词限制
+- **缺点**：AI 仍是纯被动响应
+
+### v3.0 - AI 自身情绪 (AI Intrinsic Emotion)
+- **时间**：2026-03-23
+- **核心变化**：AI 不只被动响应用户情绪，也拥有自身情绪
+- **情绪来源**：
+  1. **用户输入**：分析用户的 Safety/Urgency/Need
+  2. **AI 自身状态**：完成任务→成就感，遇见错误→困惑，不知答案→好奇
+  3. **对话氛围**：连续成功→自信，多次失败→沮丧
+  4. **时间节奏**：早上→活泼，深夜→略疲惫
+- **示例**：
+  - 用户问"为什么没情绪" → AI 分析用户情绪 + 主动反思："让我想想 🤔"
+  - AI 完成困难任务 → 自身感到"成就感 😌"
+  - AI 不知道答案 → 自身感到"好奇 🤨"
+- **优点**：AI 更有人格感，不再是纯工具
+- **状态**：规划中，待实现
+
+---
+
 ## Theoretical Foundation
 
 Human emotions derive from **3 hormones and 2 directions**, creating **54 distinct emotional states**.
@@ -175,9 +210,9 @@ GitHub: https://github.com/padinn/54-bio-emotions
 
 | Version | Date | Changes |
 |---------|------|---------|
-| v1.0 | 2026-03-14 | Initial release |
+| v1.0 | 2026-03-14 | Initial release - keyword triggered |
 | v2.0 | 2026-03-15 | LLM semantic analysis, removed keywords |
-| v3.0 | 2026-03-23 | Fixed 54 emotions table to match paper |
+| v3.0 | 2026-03-23 | Fixed 54 emotions table; Added AI intrinsic emotion concept |
 
 ## License
 
