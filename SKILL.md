@@ -163,6 +163,7 @@ For a more formal, implementation-oriented reference, see:
 
 - `references/implementation-spec.md`
 - `references/intrinsic-affect-state.schema.json`
+- `runtime/ts/intrinsic-affect.ts`
 
 ---
 
@@ -501,3 +502,4 @@ An initial Cursor adapter pack now lives in `adapters/cursor/`.
 | v4.6 | 2026-04-08 | Added an initial Windsurf adapter pack with native skill, model-decision rule, and root `AGENTS.md` guidance |
 | v4.7 | 2026-04-08 | Added an initial Cursor adapter pack with MDC rule, root `AGENTS.md`, and `CLAUDE.md` compatibility |
 | v4.8 | 2026-04-08 | Added a formal implementation spec, default coefficients, policy mappings, and a minimal runtime JSON schema |
+| v4.9 | 2026-04-08 | Added a dependency-free TypeScript reference runtime implementing `blend()` and `derivePolicy()` |
