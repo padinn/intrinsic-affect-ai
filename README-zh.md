@@ -1,6 +1,6 @@
 # Intrinsic Affect for AI
 
-[English](README.md) | [中文](README-zh.md)
+[English](README.md) | [中文](README-zh.md) | [日本語](README-ja.md)
 
 ---
 
