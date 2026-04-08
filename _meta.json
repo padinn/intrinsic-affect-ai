@@ -1,7 +1,7 @@
 {
   "name": "intrinsic-affect-ai",
-  "version": "4.9.0",
-  "description": "An OpenClaw implementation of Intrinsic Affect for AI, a foundational affective architecture for AI systems with a formal implementation spec, a TypeScript reference runtime, intrinsic-state persistence, coupling, policy impact, a reference update model, and initial Claude Code, OpenCode, Windsurf, and Cursor adapter support based on the 54 Bio-Emotions Framework.",
+  "version": "5.1.0",
+  "description": "An OpenClaw implementation of Intrinsic Affect for AI, a foundational affective architecture for AI systems with a formal implementation spec, JSON schema, conformance vectors, a TypeScript reference runtime, and initial Claude Code, OpenCode, Windsurf, and Cursor adapter support based on the 54 Bio-Emotions Framework.",
   "author": "Guo Zhuoqiang",
   "homepage": "https://github.com/padinn/intrinsic-affect-ai",
   "tags": ["ai", "emotion", "affective-architecture", "agents"],

@@ -79,6 +79,7 @@ The project now includes a formal implementation layer:
 
 - [references/implementation-spec.md](references/implementation-spec.md)
 - [references/intrinsic-affect-state.schema.json](references/intrinsic-affect-state.schema.json)
+- [references/conformance-vectors.json](references/conformance-vectors.json)
 - [runtime/ts/intrinsic-affect.ts](runtime/ts/intrinsic-affect.ts)
 
 These files define the current reference standard for:
@@ -88,6 +89,7 @@ These files define the current reference standard for:
 - `blend()` update behavior
 - `derive_policy()` mappings
 - minimal runtime payload shape
+- conformance test vectors
 - a working TypeScript reference implementation
 
 ## How Intrinsic State Is Formed
@@ -219,7 +221,7 @@ Today, this repository includes:
 
 - the OpenClaw skill implementation in [SKILL.md](SKILL.md)
 - the original framework papers in English and Chinese
-- the implementation spec and JSON schema in [references/implementation-spec.md](references/implementation-spec.md) and [references/intrinsic-affect-state.schema.json](references/intrinsic-affect-state.schema.json)
+- the implementation spec, JSON schema, and conformance vectors in [references/implementation-spec.md](references/implementation-spec.md), [references/intrinsic-affect-state.schema.json](references/intrinsic-affect-state.schema.json), and [references/conformance-vectors.json](references/conformance-vectors.json)
 - the TypeScript reference runtime in [runtime/ts/intrinsic-affect.ts](runtime/ts/intrinsic-affect.ts)
 - metadata for packaging and publishing
 
@@ -368,16 +370,8 @@ clawhub install intrinsic-affect-ai
 | v2.0 | 2026-03-15 | LLM semantic analysis, removed keywords |
 | v3.0 | 2026-03-23 | Added AI intrinsic emotion concepts |
 | v3.5 | 2026-03-23 | Shifted from tone change to strategy change |
-| v4.0 | 2026-04-08 | Rebranded as Intrinsic Affect for AI and repositioned as a foundational affective architecture for AI systems |
-| v4.1 | 2026-04-08 | Added a fuller intrinsic-state mechanism covering sources, persistence, coupling, and policy impact |
-| v4.2 | 2026-04-08 | Added a minimal state schema, reference update formula, and multi-turn trajectory framing |
-| v4.3 | 2026-04-08 | Added a cross-platform compatibility roadmap covering OpenCode, Claude Code, Cursor, Windsurf, and Antigravity |
-| v4.4 | 2026-04-08 | Added an initial Claude Code adapter pack with `CLAUDE.md`, plugin metadata, a Claude-native skill, and a policy subagent |
-| v4.5 | 2026-04-08 | Added an initial OpenCode adapter pack with native `.opencode` skill layout plus `.claude` and `.agents` mirrors |
-| v4.6 | 2026-04-08 | Added an initial Windsurf adapter pack with native skill, model-decision rule, and root `AGENTS.md` guidance |
-| v4.7 | 2026-04-08 | Added an initial Cursor adapter pack with MDC rule, root `AGENTS.md`, and `CLAUDE.md` compatibility |
-| v4.8 | 2026-04-08 | Added a formal implementation spec, default coefficients, policy mappings, and a minimal runtime JSON schema |
-| v4.9 | 2026-04-08 | Added a dependency-free TypeScript reference runtime implementing `blend()` and `derivePolicy()` |
+| v5.0 | 2026-04-08 | Major architecture upgrade: rebranded as Intrinsic Affect for AI; expanded the intrinsic-state model; added the minimal state schema, reference update model, implementation spec, JSON schema, TypeScript reference runtime, and conformance vectors |
+| v5.1 | 2026-04-08 | Platform adapter bundle: added initial adapter packs for Claude Code, OpenCode, Windsurf, and Cursor, plus the cross-platform roadmap |
 
 ## License
 

@@ -16,6 +16,7 @@ This spec defines:
 - a reference `blend()` rule
 - a reference `derive_policy()` mapping
 - a minimal runtime payload shape
+- conformance test vectors
 
 This spec does **not** require every implementation to use the exact same coefficients. It defines a stable default that other systems can adopt, compare against, or extend.
 
@@ -426,6 +427,22 @@ The minimal runtime payload shape is:
   }
 }
 ```
+
+## Conformance Test Vectors
+
+Reference vectors live in:
+
+- `references/conformance-vectors.json`
+
+Each vector provides:
+
+- a fixed input state
+- a reference output from the official TypeScript runtime
+- a default numeric tolerance
+
+These vectors are meant to help other implementations answer a simple question:
+
+**Does my implementation behave closely enough to the reference model to be considered compatible?**
 
 ## Conformance Notes
 

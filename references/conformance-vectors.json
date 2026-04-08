@@ -1,0 +1,222 @@
+{
+  "version": "0.1",
+  "tolerance": 0.0001,
+  "cases": [
+    {
+      "id": "blocked_urgent_user",
+      "description": "User arrives blocked and urgent; the assistant should become more direct and moderately more cautious without becoming emotionally chaotic.",
+      "input": {
+        "user_state": {
+          "safety": -0.4,
+          "urgency": 0.8,
+          "need": 0.1,
+          "direction": 0.3
+        },
+        "assistant_state": {
+          "safety": 0.0,
+          "urgency": 0.0,
+          "need": 0.0,
+          "direction": 0.0,
+          "confidence": 0.5,
+          "friction": 0.0
+        },
+        "task_signal": {
+          "progress": -0.2,
+          "blockage": 0.7,
+          "success": 0.0,
+          "failure": 0.4
+        },
+        "epistemic_signal": {
+          "certainty": 0.3,
+          "ambiguity": 0.7,
+          "evidence": 0.2
+        },
+        "relational_signal": {
+          "trust": -0.1,
+          "warmth": 0.0,
+          "hostility": 0.2,
+          "collaboration": 0.4
+        }
+      },
+      "expected": {
+        "assistant_state": {
+          "safety": -0.098,
+          "urgency": 0.1708,
+          "need": 0.021,
+          "direction": 0.042,
+          "confidence": 0.384,
+          "friction": 0.0882
+        },
+        "policy_state": {
+          "directness": 0.5484,
+          "structure": 0.4348,
+          "reassurance": 0.5879,
+          "caution": 0.4296,
+          "initiative": 0.537
+        }
+      }
+    },
+    {
+      "id": "collaborative_recovery",
+      "description": "A previously strained interaction recovers under strong progress and high collaboration.",
+      "input": {
+        "user_state": {
+          "safety": 0.6,
+          "urgency": 0.2,
+          "need": 0.4,
+          "direction": -0.1
+        },
+        "assistant_state": {
+          "safety": -0.3,
+          "urgency": 0.5,
+          "need": 0.0,
+          "direction": 0.1,
+          "confidence": 0.35,
+          "friction": 0.6
+        },
+        "task_signal": {
+          "progress": 0.8,
+          "blockage": 0.1,
+          "success": 0.7,
+          "failure": 0.0
+        },
+        "epistemic_signal": {
+          "certainty": 0.8,
+          "ambiguity": 0.2,
+          "evidence": 0.7
+        },
+        "relational_signal": {
+          "trust": 0.6,
+          "warmth": 0.5,
+          "hostility": 0.0,
+          "collaboration": 0.9
+        }
+      },
+      "expected": {
+        "assistant_state": {
+          "safety": -0.041,
+          "urgency": 0.36,
+          "need": 0.105,
+          "direction": 0.0888,
+          "confidence": 0.4369,
+          "friction": 0.4695
+        },
+        "policy_state": {
+          "directness": 0.5607,
+          "structure": 0.5478,
+          "reassurance": 0.5036,
+          "caution": 0.5376,
+          "initiative": 0.5324
+        }
+      }
+    },
+    {
+      "id": "low_trust_high_uncertainty",
+      "description": "Low trust and high ambiguity should push the system toward caution and structure without collapsing into passivity.",
+      "input": {
+        "user_state": {
+          "safety": -0.7,
+          "urgency": 0.3,
+          "need": -0.2,
+          "direction": 0.2
+        },
+        "assistant_state": {
+          "safety": 0.1,
+          "urgency": 0.1,
+          "need": -0.1,
+          "direction": 0.0,
+          "confidence": 0.5,
+          "friction": 0.2
+        },
+        "task_signal": {
+          "progress": 0.0,
+          "blockage": 0.3,
+          "success": 0.0,
+          "failure": 0.2
+        },
+        "epistemic_signal": {
+          "certainty": 0.2,
+          "ambiguity": 0.8,
+          "evidence": 0.2
+        },
+        "relational_signal": {
+          "trust": -0.6,
+          "warmth": -0.2,
+          "hostility": 0.5,
+          "collaboration": 0.2
+        }
+      },
+      "expected": {
+        "assistant_state": {
+          "safety": -0.0358,
+          "urgency": 0.163,
+          "need": -0.1084,
+          "direction": 0.0322,
+          "confidence": 0.3856,
+          "friction": 0.2252
+        },
+        "policy_state": {
+          "directness": 0.5393,
+          "structure": 0.4669,
+          "reassurance": 0.5291,
+          "caution": 0.4589,
+          "initiative": 0.522
+        }
+      }
+    },
+    {
+      "id": "warm_overwhelmed_user",
+      "description": "Warm but overwhelmed interactions should increase reassurance and structure while keeping expression controlled.",
+      "input": {
+        "user_state": {
+          "safety": 0.4,
+          "urgency": 0.1,
+          "need": 0.8,
+          "direction": -0.4
+        },
+        "assistant_state": {
+          "safety": 0.2,
+          "urgency": 0.1,
+          "need": 0.2,
+          "direction": -0.1,
+          "confidence": 0.7,
+          "friction": 0.1
+        },
+        "task_signal": {
+          "progress": 0.4,
+          "blockage": 0.2,
+          "success": 0.5,
+          "failure": 0.0
+        },
+        "epistemic_signal": {
+          "certainty": 0.7,
+          "ambiguity": 0.3,
+          "evidence": 0.6
+        },
+        "relational_signal": {
+          "trust": 0.5,
+          "warmth": 0.7,
+          "hostility": 0.0,
+          "collaboration": 0.8
+        }
+      },
+      "expected": {
+        "assistant_state": {
+          "safety": 0.2574,
+          "urgency": 0.0902,
+          "need": 0.2952,
+          "direction": -0.0776,
+          "confidence": 0.6687,
+          "friction": 0.0829
+        },
+        "policy_state": {
+          "directness": 0.5813,
+          "structure": 0.3096,
+          "reassurance": 0.5897,
+          "caution": 0.3029,
+          "initiative": 0.6609
+        }
+      }
+    }
+  ]
+}

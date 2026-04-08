@@ -79,6 +79,7 @@ Intrinsic Affect for AI 不是：
 
 - [references/implementation-spec.md](references/implementation-spec.md)
 - [references/intrinsic-affect-state.schema.json](references/intrinsic-affect-state.schema.json)
+- [references/conformance-vectors.json](references/conformance-vectors.json)
 - [runtime/ts/intrinsic-affect.ts](runtime/ts/intrinsic-affect.ts)
 
 这两份文件定义了当前参考标准中的：
@@ -88,6 +89,7 @@ Intrinsic Affect for AI 不是：
 - `blend()` 更新规则
 - `derive_policy()` 映射方式
 - 最小运行时 JSON 结构
+- conformance test vectors
 - 一份可直接复用的 TypeScript 参考实现
 
 ## 内在状态如何形成
@@ -223,7 +225,7 @@ Intrinsic Affect 首先应该改变帮助策略，而不是只改变措辞。
 
 - OpenClaw skill 实现，定义在 [SKILL.md](SKILL.md)
 - 中英文论文原稿
-- 实现规范与 JSON schema，定义在 [references/implementation-spec.md](references/implementation-spec.md) 和 [references/intrinsic-affect-state.schema.json](references/intrinsic-affect-state.schema.json)
+- 实现规范、JSON schema 与 conformance vectors，定义在 [references/implementation-spec.md](references/implementation-spec.md)、[references/intrinsic-affect-state.schema.json](references/intrinsic-affect-state.schema.json) 和 [references/conformance-vectors.json](references/conformance-vectors.json)
 - TypeScript 参考运行时，定义在 [runtime/ts/intrinsic-affect.ts](runtime/ts/intrinsic-affect.ts)
 - 打包和发布所需的元数据
 
@@ -372,16 +374,8 @@ clawhub install intrinsic-affect-ai
 | v2.0 | 2026-03-15 | 引入 LLM 语义分析，摆脱关键词依赖 |
 | v3.0 | 2026-03-23 | 引入 AI 自身情绪概念 |
 | v3.5 | 2026-03-23 | 从“换语气”升级为“换帮助策略” |
-| v4.0 | 2026-04-08 | 重命名为 Intrinsic Affect for AI，并重新定位为 AI 的基础情感架构 |
-| v4.1 | 2026-04-08 | 补全更完整的内在机制：状态来源、持续性、耦合关系与策略影响 |
-| v4.2 | 2026-04-08 | 增加最小状态结构、参考更新公式，以及多轮轨迹视角 |
-| v4.3 | 2026-04-08 | 增加跨平台兼容路线图，覆盖 OpenCode、Claude Code、Cursor、Windsurf 与 Antigravity |
-| v4.4 | 2026-04-08 | 增加第一版 Claude Code 适配包，包含 `CLAUDE.md`、plugin 元数据、Claude skill 与 policy subagent |
-| v4.5 | 2026-04-08 | 增加第一版 OpenCode 适配包，包含原生 `.opencode` skill 以及 `.claude`、`.agents` 镜像布局 |
-| v4.6 | 2026-04-08 | 增加第一版 Windsurf 适配包，包含原生 skill、model-decision rule 与根级 `AGENTS.md` 指导 |
-| v4.7 | 2026-04-08 | 增加第一版 Cursor 适配包，包含 MDC rule、根级 `AGENTS.md` 与 `CLAUDE.md` 兼容层 |
-| v4.8 | 2026-04-08 | 增加正式 implementation spec、默认系数、策略映射，以及最小运行时 JSON schema |
-| v4.9 | 2026-04-08 | 增加零依赖 TypeScript 参考运行时，实现 `blend()` 与 `derivePolicy()` |
+| v5.0 | 2026-04-08 | 体系级升级：重命名为 Intrinsic Affect for AI；补全内在状态模型；加入最小状态结构、参考更新模型、implementation spec、JSON schema、TypeScript 参考运行时，以及 conformance vectors |
+| v5.1 | 2026-04-08 | 平台适配合集：加入 Claude Code、OpenCode、Windsurf、Cursor 的第一版适配包，并补上跨平台路线图 |
 
 ## 许可证
 

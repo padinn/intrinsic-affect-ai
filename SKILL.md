@@ -163,6 +163,7 @@ For a more formal, implementation-oriented reference, see:
 
 - `references/implementation-spec.md`
 - `references/intrinsic-affect-state.schema.json`
+- `references/conformance-vectors.json`
 - `runtime/ts/intrinsic-affect.ts`
 
 ---
@@ -493,13 +494,5 @@ An initial Cursor adapter pack now lives in `adapters/cursor/`.
 | v2.0 | 2026-03-15 | LLM semantic analysis, removed keywords |
 | v3.0 | 2026-03-23 | Added AI intrinsic emotion concepts |
 | v3.5 | 2026-03-23 | Shifted from tone change to strategy change |
-| v4.0 | 2026-04-08 | Reframed as Intrinsic Affect for AI, a foundational affective architecture for AI systems |
-| v4.1 | 2026-04-08 | Added a fuller intrinsic-state mechanism: state sources, persistence, coupling, update loop, and policy effects |
-| v4.2 | 2026-04-08 | Added a minimal state schema, reference update model, pseudocode, and multi-turn dialogue trajectories |
-| v4.3 | 2026-04-08 | Added cross-platform portability guidance for OpenCode, Claude Code, Cursor, Windsurf, and Antigravity |
-| v4.4 | 2026-04-08 | Added an initial Claude Code adapter pack with `CLAUDE.md`, plugin metadata, a Claude-native skill, and a policy subagent |
-| v4.5 | 2026-04-08 | Added an initial OpenCode adapter pack with native `.opencode` skill layout plus `.claude` and `.agents` mirrors |
-| v4.6 | 2026-04-08 | Added an initial Windsurf adapter pack with native skill, model-decision rule, and root `AGENTS.md` guidance |
-| v4.7 | 2026-04-08 | Added an initial Cursor adapter pack with MDC rule, root `AGENTS.md`, and `CLAUDE.md` compatibility |
-| v4.8 | 2026-04-08 | Added a formal implementation spec, default coefficients, policy mappings, and a minimal runtime JSON schema |
-| v4.9 | 2026-04-08 | Added a dependency-free TypeScript reference runtime implementing `blend()` and `derivePolicy()` |
+| v5.0 | 2026-04-08 | Major core upgrade: rebranded as Intrinsic Affect for AI; expanded the intrinsic-state model; added the implementation spec, JSON schema, conformance vectors, and TypeScript reference runtime |
+| v5.1 | 2026-04-08 | Platform adapter bundle: added initial adapters for Claude Code, OpenCode, Windsurf, and Cursor, plus cross-platform portability guidance |
