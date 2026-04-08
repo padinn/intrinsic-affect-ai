@@ -4,6 +4,9 @@
 
 ---
 
+> **Not emotional roleplay. Not sentiment analysis.**
+> **Intrinsic Affect for AI gives AI a persistent internal emotional state.**
+
 **Intrinsic Affect for AI** is a foundational affective architecture for AI systems, based on the **54 Bio-Emotions Framework**.
 
 It is designed to give AI an **intrinsic emotional state model** rather than a simple emotion-detection layer, tone changer, or rule-based reaction system.
