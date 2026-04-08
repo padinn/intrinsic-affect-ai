@@ -206,6 +206,85 @@ Today, this repository includes:
 
 The broader direction is to make Intrinsic Affect usable as a general affective foundation for AI systems, agents, and model behaviors beyond OpenClaw.
 
+## Compatibility Roadmap
+
+Intrinsic Affect for AI should not be limited to OpenClaw. The practical rollout path is to support multiple extension surfaces across the AI tooling ecosystem.
+
+### Tier 1: Native or Near-Native Targets
+
+- **OpenClaw**: native `SKILL.md` support. This repository is the current canonical implementation.
+- **Claude Code**: native skills, plugins, hooks, and `CLAUDE.md` memory all exist. This is now a first-class target, not just an indirect adapter.
+- **OpenCode**: native skill support with `SKILL.md`, and it can also load Claude-compatible and `.agents/skills` layouts. This makes it one of the easiest expansion targets.
+- **Windsurf**: supports `Skills`, `Rules`, `Memories`, `Workflows`, and `AGENTS.md`, making it another strong target for Intrinsic Affect.
+
+### Tier 2: Rules and Memory Targets
+
+- **Cursor**: project rules in `.cursor/rules/*.mdc` are the natural adapter surface for Intrinsic Affect.
+
+### Tier 3: Experimental or Indirect Targets
+
+- **Antigravity**: I could not verify official public extension docs for a native skill format. For now, the best path is an experimental adapter via reusable prompt packs, artifact templates, memory/rule equivalents, or an eventual MCP-based integration.
+- **Other agent frameworks**: any system that supports system prompts, repo memory files, rules, agents, or MCP can adopt a reduced Intrinsic Affect adapter.
+
+## Adapter Strategy
+
+To maximize reach, the project should be packaged in several forms at once:
+
+### 1. Canonical Spec
+
+The current repository remains the system-of-record for:
+
+- the theory
+- the state model
+- the update logic
+- the policy model
+
+### 2. Platform Adapters
+
+Each target platform should get its own thin adapter:
+
+- **OpenClaw / OpenCode**: `SKILL.md`
+- **Claude Code**: native skill/plugin package plus `CLAUDE.md`, optional subagents, hooks, and MCP integration
+- **Cursor**: `.cursor/rules/*.mdc`
+- **Windsurf**: native `Skills`, plus `.windsurf/rules/*.md`, `AGENTS.md`, and optional memories/workflows
+- **Antigravity**: experimental prompt/rule pack until official extension points are clearer
+
+### 3. Universal Delivery Layer
+
+To go beyond editor-specific ecosystems, Intrinsic Affect should also ship as:
+
+- an `AGENTS.md`-compatible instruction pack
+- an MCP server or MCP-backed memory/policy service
+- a model-agnostic prompt spec for agent builders
+
+## Recommended Priority
+
+If the goal is influence, the rollout order should be:
+
+1. **Claude Code**
+2. **Windsurf**
+3. **OpenCode**
+4. **Cursor**
+5. **Antigravity**
+
+This order balances ecosystem reach with realistic adapter quality.
+
+Why:
+
+- Claude Code now supports native skills, plugins, hooks, MCP, and project memory, making it both influential and technically expressive.
+- Windsurf has large strategic reach and multiple adaptation layers: skills, rules, memories, workflows, and `AGENTS.md`.
+- OpenCode is one of the easiest wins because it already supports native skills and even Claude-compatible skill locations.
+- Cursor matters because of reach, but the adapter is more rules-centric than skill-centric.
+- Antigravity is strategically interesting, but the adapter path is still less clearly documented in official public sources.
+
+If the goal is fastest execution rather than maximum visibility, a better build order is:
+
+1. **OpenCode**
+2. **Claude Code**
+3. **Windsurf**
+4. **Cursor**
+5. **Antigravity**
+
 ## Installation
 
 ### Using ClawHub
@@ -268,6 +347,7 @@ clawhub install intrinsic-affect-ai
 | v4.0 | 2026-04-08 | Rebranded as Intrinsic Affect for AI and repositioned as a foundational affective architecture for AI systems |
 | v4.1 | 2026-04-08 | Added a fuller intrinsic-state mechanism covering sources, persistence, coupling, and policy impact |
 | v4.2 | 2026-04-08 | Added a minimal state schema, reference update formula, and multi-turn trajectory framing |
+| v4.3 | 2026-04-08 | Added a cross-platform compatibility roadmap covering OpenCode, Claude Code, Cursor, Windsurf, and Antigravity |
 
 ## License
 

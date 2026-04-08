@@ -458,6 +458,22 @@ Turn 3:
 
 ---
 
+## Portability Strategy
+
+Although this file is the OpenClaw implementation, the broader project should be portable across agent ecosystems.
+
+Recommended adapter surfaces:
+
+- OpenClaw / OpenCode: native `SKILL.md`
+- Claude Code: native skills/plugins, `CLAUDE.md`, subagents, hooks, and MCP
+- Cursor: `.cursor/rules/*.mdc`
+- Windsurf: native skills, plus rules, memories, workflows, and `AGENTS.md`
+- Antigravity: experimental prompt/rule pack until the extension model is better documented
+
+The canonical logic should stay in this repository, while platform adapters remain thin and platform-specific.
+
+---
+
 ## Changelog
 
 | Version | Date | Changes |
@@ -469,3 +485,4 @@ Turn 3:
 | v4.0 | 2026-04-08 | Reframed as Intrinsic Affect for AI, a foundational affective architecture for AI systems |
 | v4.1 | 2026-04-08 | Added a fuller intrinsic-state mechanism: state sources, persistence, coupling, update loop, and policy effects |
 | v4.2 | 2026-04-08 | Added a minimal state schema, reference update model, pseudocode, and multi-turn dialogue trajectories |
+| v4.3 | 2026-04-08 | Added cross-platform portability guidance for OpenCode, Claude Code, Cursor, Windsurf, and Antigravity |

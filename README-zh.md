@@ -210,6 +210,85 @@ Intrinsic Affect 首先应该改变帮助策略，而不是只改变措辞。
 
 未来方向是把 Intrinsic Affect 做成可供更广泛 AI 系统、智能体和模型行为层使用的基础能力，而不只是一份 OpenClaw skill。
 
+## 兼容范围路线图
+
+Intrinsic Affect for AI 不应该被限制在 OpenClaw 里。现实可行的扩展路线，是去适配 AI 工具生态里不同的扩展入口。
+
+### 第一层：原生或近原生适配目标
+
+- **OpenClaw**：原生 `SKILL.md` 支持。当前仓库就是规范实现。
+- **Claude Code**：现在已经具备原生 skills、plugins、hooks 以及 `CLAUDE.md` memory。它已经是第一优先级目标，而不只是间接适配对象。
+- **OpenCode**：原生支持 skill，并且还能读取 Claude 兼容路径和 `.agents/skills` 布局。这让它成为最容易切入的扩展目标之一。
+- **Windsurf**：支持 `Skills`、`Rules`、`Memories`、`Workflows` 和 `AGENTS.md`，非常适合承载 Intrinsic Affect。
+
+### 第二层：Rules / Memory 型适配目标
+
+- **Cursor**：最自然的适配面是 `.cursor/rules/*.mdc` 规则文件。
+
+### 第三层：实验性或间接适配目标
+
+- **Antigravity**：我目前没有查到足够明确的官方公开文档，来确认它是否有稳定的原生 skill 机制。现阶段更稳的路径是通过可复用 prompt pack、模板、memory/rule 等价物，或未来的 MCP 集成来实验适配。
+- **其他 agent 框架**：凡是支持 system prompt、repo memory、rules、agents 或 MCP 的系统，都可以适配一个简化版 Intrinsic Affect。
+
+## 适配策略
+
+如果想尽可能扩大影响范围，这个项目应该同时以几种形态存在：
+
+### 1. Canonical Spec
+
+当前仓库继续作为系统主规范，负责：
+
+- 理论定义
+- 状态模型
+- 更新逻辑
+- 策略层映射
+
+### 2. Platform Adapters
+
+然后为不同平台做轻量适配层：
+
+- **OpenClaw / OpenCode**：`SKILL.md`
+- **Claude Code**：原生 skill/plugin 包 + `CLAUDE.md` + 可选 subagent + hooks + MCP 集成
+- **Cursor**：`.cursor/rules/*.mdc`
+- **Windsurf**：原生 `Skills`，外加 `.windsurf/rules/*.md`、`AGENTS.md`、可选 memories / workflows
+- **Antigravity**：在官方扩展点更明确之前，先走实验性 prompt/rule pack
+
+### 3. Universal Delivery Layer
+
+为了超出编辑器生态，Intrinsic Affect 还应该进一步被包装成：
+
+- `AGENTS.md` 兼容指令包
+- MCP server 或 MCP 驱动的 memory / policy service
+- 面向 agent builder 的模型无关 prompt spec
+
+## 建议优先级
+
+如果目标是扩大影响力，建议顺序是：
+
+1. **Claude Code**
+2. **Windsurf**
+3. **OpenCode**
+4. **Cursor**
+5. **Antigravity**
+
+这个顺序兼顾了“生态影响力”和“适配表达能力”。
+
+原因：
+
+- Claude Code 现在已经支持原生 skills、plugins、hooks、MCP 和项目记忆，是影响力和技术表达力都很强的目标。
+- Windsurf 具有很强的生态价值，而且 skills、rules、memories、workflows、`AGENTS.md` 都能作为适配入口。
+- OpenCode 很适合快速落地，因为它已经支持原生 skills，还兼容 Claude 风格技能路径。
+- Cursor 的覆盖面很大，但当前更偏 rules 适配，而不是 skill 原生适配。
+- Antigravity 很有战略价值，但目前公开可验证的适配路径还不够清晰。
+
+如果目标是更快做出首批成果，而不是优先抢最大曝光，那么更适合的执行顺序是：
+
+1. **OpenCode**
+2. **Claude Code**
+3. **Windsurf**
+4. **Cursor**
+5. **Antigravity**
+
 ## 安装
 
 ### 使用 ClawHub
@@ -272,6 +351,7 @@ clawhub install intrinsic-affect-ai
 | v4.0 | 2026-04-08 | 重命名为 Intrinsic Affect for AI，并重新定位为 AI 的基础情感架构 |
 | v4.1 | 2026-04-08 | 补全更完整的内在机制：状态来源、持续性、耦合关系与策略影响 |
 | v4.2 | 2026-04-08 | 增加最小状态结构、参考更新公式，以及多轮轨迹视角 |
+| v4.3 | 2026-04-08 | 增加跨平台兼容路线图，覆盖 OpenCode、Claude Code、Cursor、Windsurf 与 Antigravity |
 
 ## 许可证
 
