@@ -73,6 +73,21 @@ Intrinsic Affect for AI 不是：
 
 这正是这次第二轮升级补上的核心。
 
+## Implementation Spec
+
+项目现在已经加入正式的实现层规范：
+
+- [references/implementation-spec.md](references/implementation-spec.md)
+- [references/intrinsic-affect-state.schema.json](references/intrinsic-affect-state.schema.json)
+
+这两份文件定义了当前参考标准中的：
+
+- 变量范围
+- 默认系数
+- `blend()` 更新规则
+- `derive_policy()` 映射方式
+- 最小运行时 JSON 结构
+
 ## 内在状态如何形成
 
 助手的状态应同时从几条通道更新：
@@ -206,6 +221,7 @@ Intrinsic Affect 首先应该改变帮助策略，而不是只改变措辞。
 
 - OpenClaw skill 实现，定义在 [SKILL.md](SKILL.md)
 - 中英文论文原稿
+- 实现规范与 JSON schema，定义在 [references/implementation-spec.md](references/implementation-spec.md) 和 [references/intrinsic-affect-state.schema.json](references/intrinsic-affect-state.schema.json)
 - 打包和发布所需的元数据
 
 未来方向是把 Intrinsic Affect 做成可供更广泛 AI 系统、智能体和模型行为层使用的基础能力，而不只是一份 OpenClaw skill。
@@ -361,6 +377,7 @@ clawhub install intrinsic-affect-ai
 | v4.5 | 2026-04-08 | 增加第一版 OpenCode 适配包，包含原生 `.opencode` skill 以及 `.claude`、`.agents` 镜像布局 |
 | v4.6 | 2026-04-08 | 增加第一版 Windsurf 适配包，包含原生 skill、model-decision rule 与根级 `AGENTS.md` 指导 |
 | v4.7 | 2026-04-08 | 增加第一版 Cursor 适配包，包含 MDC rule、根级 `AGENTS.md` 与 `CLAUDE.md` 兼容层 |
+| v4.8 | 2026-04-08 | 增加正式 implementation spec、默认系数、策略映射，以及最小运行时 JSON schema |
 
 ## 许可证
 

@@ -159,6 +159,11 @@ This is the behavior layer derived from the updated assistant state. It should d
 
 Keep scalar values bounded, for example in `[-1, 1]` or `[0, 1]`, so the system remains stable and interpretable.
 
+For a more formal, implementation-oriented reference, see:
+
+- `references/implementation-spec.md`
+- `references/intrinsic-affect-state.schema.json`
+
 ---
 
 ## Update Loop
@@ -495,3 +500,4 @@ An initial Cursor adapter pack now lives in `adapters/cursor/`.
 | v4.5 | 2026-04-08 | Added an initial OpenCode adapter pack with native `.opencode` skill layout plus `.claude` and `.agents` mirrors |
 | v4.6 | 2026-04-08 | Added an initial Windsurf adapter pack with native skill, model-decision rule, and root `AGENTS.md` guidance |
 | v4.7 | 2026-04-08 | Added an initial Cursor adapter pack with MDC rule, root `AGENTS.md`, and `CLAUDE.md` compatibility |
+| v4.8 | 2026-04-08 | Added a formal implementation spec, default coefficients, policy mappings, and a minimal runtime JSON schema |

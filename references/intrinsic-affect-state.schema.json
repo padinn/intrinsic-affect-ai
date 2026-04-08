@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/padinn/intrinsic-affect-ai/blob/main/references/intrinsic-affect-state.schema.json",
+  "title": "Intrinsic Affect Runtime State",
+  "description": "Minimal runtime payload for Intrinsic Affect for AI.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version",
+    "user_state",
+    "assistant_state",
+    "policy_state"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "const": "0.1"
+    },
+    "user_state": {
+      "$ref": "#/$defs/userState"
+    },
+    "assistant_state": {
+      "$ref": "#/$defs/assistantState"
+    },
+    "policy_state": {
+      "$ref": "#/$defs/policyState"
+    }
+  },
+  "$defs": {
+    "axis": {
+      "type": "number",
+      "minimum": -1.0,
+      "maximum": 1.0
+    },
+    "scalar01": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "userState": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "safety",
+        "urgency",
+        "need",
+        "direction"
+      ],
+      "properties": {
+        "safety": {
+          "$ref": "#/$defs/axis"
+        },
+        "urgency": {
+          "$ref": "#/$defs/axis"
+        },
+        "need": {
+          "$ref": "#/$defs/axis"
+        },
+        "direction": {
+          "$ref": "#/$defs/axis"
+        }
+      }
+    },
+    "assistantState": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "safety",
+        "urgency",
+        "need",
+        "direction",
+        "confidence",
+        "friction"
+      ],
+      "properties": {
+        "safety": {
+          "$ref": "#/$defs/axis"
+        },
+        "urgency": {
+          "$ref": "#/$defs/axis"
+        },
+        "need": {
+          "$ref": "#/$defs/axis"
+        },
+        "direction": {
+          "$ref": "#/$defs/axis"
+        },
+        "confidence": {
+          "$ref": "#/$defs/scalar01"
+        },
+        "friction": {
+          "$ref": "#/$defs/scalar01"
+        }
+      }
+    },
+    "policyState": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "directness",
+        "structure",
+        "reassurance",
+        "caution",
+        "initiative"
+      ],
+      "properties": {
+        "directness": {
+          "$ref": "#/$defs/scalar01"
+        },
+        "structure": {
+          "$ref": "#/$defs/scalar01"
+        },
+        "reassurance": {
+          "$ref": "#/$defs/scalar01"
+        },
+        "caution": {
+          "$ref": "#/$defs/scalar01"
+        },
+        "initiative": {
+          "$ref": "#/$defs/scalar01"
+        }
+      }
+    }
+  }
+}

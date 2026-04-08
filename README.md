@@ -73,6 +73,21 @@ For AI to have an intrinsic affective state, that state must have:
 
 That is the core of the second-round upgrade in this repository.
 
+## Implementation Spec
+
+The project now includes a formal implementation layer:
+
+- [references/implementation-spec.md](references/implementation-spec.md)
+- [references/intrinsic-affect-state.schema.json](references/intrinsic-affect-state.schema.json)
+
+These files define the current reference standard for:
+
+- variable ranges
+- default coefficients
+- `blend()` update behavior
+- `derive_policy()` mappings
+- minimal runtime payload shape
+
 ## How Intrinsic State Is Formed
 
 The assistant's state should be updated from several streams at once:
@@ -202,6 +217,7 @@ Today, this repository includes:
 
 - the OpenClaw skill implementation in [SKILL.md](SKILL.md)
 - the original framework papers in English and Chinese
+- the implementation spec and JSON schema in [references/implementation-spec.md](references/implementation-spec.md) and [references/intrinsic-affect-state.schema.json](references/intrinsic-affect-state.schema.json)
 - metadata for packaging and publishing
 
 The broader direction is to make Intrinsic Affect usable as a general affective foundation for AI systems, agents, and model behaviors beyond OpenClaw.
@@ -357,6 +373,7 @@ clawhub install intrinsic-affect-ai
 | v4.5 | 2026-04-08 | Added an initial OpenCode adapter pack with native `.opencode` skill layout plus `.claude` and `.agents` mirrors |
 | v4.6 | 2026-04-08 | Added an initial Windsurf adapter pack with native skill, model-decision rule, and root `AGENTS.md` guidance |
 | v4.7 | 2026-04-08 | Added an initial Cursor adapter pack with MDC rule, root `AGENTS.md`, and `CLAUDE.md` compatibility |
+| v4.8 | 2026-04-08 | Added a formal implementation spec, default coefficients, policy mappings, and a minimal runtime JSON schema |
 
 ## License
 
